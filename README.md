@@ -1,2 +1,2 @@
 # imageProcessing
-image Processing . using python
+image Processing using python
