@@ -1,6 +1,9 @@
 # imageProcessing
 image Processing using python
 
+## Video playback 
+
+python videoPlayBack.py- -videoFilePath videos/CarsDrivingUnderBridge.mp4
 
 ## Video play back while saving sample frames
 cd video_play_back/
