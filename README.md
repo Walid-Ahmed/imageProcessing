@@ -1,6 +1,12 @@
 # imageProcessing
 image Processing using python
 
+## show image
+
+python imgShowDemo.py --imgFilePath   demo.jpg
+#python showImageHSV.py --imgFilePath   demo.jpg
+
+
 ## Video playback 
 
 Video will be played with same fps as original
@@ -28,3 +34,10 @@ press l to show morerects, m for more and q to quit
 
 cd selectiveSeacrhSegmentation </br>
 python SelectiveSearch.py --imagePath breakfast.jpg  --mode q
+
+## Saliency detection
+initial baseline of code from [here](https://www.pyimagesearch.com/2018/07/16/opencv-saliency-detection/)
+cd saliency-detection
+python static_saliency.py --image images/neymar.jpg
+python objectness_saliency.py --model objectness_trained_model --image images/barcelona.jpg . #results saves to folder results
+python motion_saliency.py   #feed from camera
