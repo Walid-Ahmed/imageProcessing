@@ -35,6 +35,12 @@ os.makedirs(folderNameToSaveFrames)
 
 frameNum=0
 
+numberOfFrames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
+print( "[INFO] The video includes {0} frames".format(numberOfFrames))
+fps = cap.get(cv2.CAP_PROP_FPS)
+print ("[INFO] Frames per second using video.get(cv2.cv.CV_CAP_PROP_FPS): {0}".format(fps))
+print("[INFO] while playing press  p to pause, press r to resume and press q to quit ")
+
 
 print("[INFO] Saving  a frame from every {} frames from video file {} ".format(everyNFrame,fileName))
 input("press any key to continue")
@@ -56,8 +62,19 @@ while(cap.isOpened()):
 
     cv2.imshow('frame',frame)
     
-    if cv2.waitKey(1) & 0xFF == ord('q'):
+
+    # record key press
+    key = cv2.waitKey(10) & 0xFF
+        
+    if key== ord('q'):  # press q to quit  video play back
         break
+        
+    if key == ord('p'):       
+        while (True):
+            key = cv2.waitKey(10) & 0xFF
+            if key== ord('r'):  # press r  to continute  video play back
+                break
+
 cap.release()
 cv2.destroyAllWindows()
 print("[INFO] Extracted frames saved to folder {}".format(folderNameToSaveFrames))
