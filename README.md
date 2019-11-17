@@ -37,7 +37,7 @@ python SelectiveSearch.py --imagePath breakfast.jpg  --mode q
 
 
 
-![sample](https://github.com/Walid-Ahmed/imageProcessing/blob/master/sampleImages/selectivesearchDemo.png)
+![Sample curve output from training cats vs dogs dataset](https://github.com/Walid-Ahmed/imageProcessing/blob/master/sampleImages/selectivesearchDemo.png)
 
 ## Saliency detection
 
