@@ -2,8 +2,13 @@
 image Processing using python
 
 ## Video playback 
+
+Note:press q to quit while the video is in playback, and press p to pause video
+
+'''
 cd video_play_back </br>
 python videoPlayBack.py --videoFilePath videos/CarsDrivingUnderBridge.mp4
+'''
 
 ## Video play back while saving sample frames
 
