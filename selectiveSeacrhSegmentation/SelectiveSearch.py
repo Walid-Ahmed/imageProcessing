@@ -4,6 +4,7 @@
 '''
 Usage:
 #python SelectiveSearch.py --imagePath breakfast.jpg  --mode q
+python SelectiveSearch.py --imagePath mo.jpeg  --mode q
 '''
  
 import argparse
@@ -67,6 +68,7 @@ if __name__ == '__main__':
  
         # show output
         cv2.imshow("Output", imOut);
+        cv2.imwrite("result.png",imOut)
  
         # record key press
         k = cv2.waitKey(0) & 0xFF
