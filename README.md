@@ -34,3 +34,7 @@ press l to show morerects, m for more and q to quit
 
 cd selectiveSeacrhSegmentation </br>
 python SelectiveSearch.py --imagePath breakfast.jpg  --mode q
+
+## Saliency detection
+initial baseline of code from [here](https://www.pyimagesearch.com/2018/07/16/opencv-saliency-detection/)
+python static_saliency.py --image images/neymar.jpg
