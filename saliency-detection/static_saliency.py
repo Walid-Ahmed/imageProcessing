@@ -1,5 +1,5 @@
 # USAGE
-# python static_saliency.py --image images/neymar.jpg
+# python static_saliency.py --image images/mosalah.jpeg
 
 # import the necessary packages
 import argparse
