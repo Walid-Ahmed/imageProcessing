@@ -21,6 +21,7 @@ Frames will be sampled every N Frame and saved to a folder with the same name as
 
 ## Selective search segmentation
 
+intial baseline of code from [here](https://www.learnopencv.com/selective-search-for-object-detection-cpp-python/)
 Selective Search uses 4 similarity measures based on color, texture, size and shape compatibility
 press l to show morerects, m for more and q to quit
 
