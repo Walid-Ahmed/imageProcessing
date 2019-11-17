@@ -1,5 +1,5 @@
 #usage
-#python videoPlayBack.py--videoFilePath videos/CarsDrivingUnderBridge.mp4
+#python videoPlayBack.py --videoFilePath videos/CarsDrivingUnderBridge.mp4
 #Note:press q to quit while the video is in playback, and press p to pause video and r to resume 
 
 import numpy as np
@@ -31,8 +31,12 @@ if __name__ == "__main__":
     print( "[INFO] The video includes {0} frames".format(numberOfFrames))
     numberOfProcessedFrames=0
     fps = cap.get(cv2.CAP_PROP_FPS)
+    delayBetweenFrames=int((1/fps)*1000)
+
     print ("[INFO] Frames per second using video.get(cv2.cv.CV_CAP_PROP_FPS): {0}".format(fps))
+    print("[INFO] Delay between frames is {} mseconds".format(delayBetweenFrames))
     print("[INFO] while playing press p to pause, press r to resume and press q to quit ")
+
 
     input("Press any key to start playing video")
 
@@ -57,7 +61,7 @@ if __name__ == "__main__":
         cv2.imshow('frame',frame)
 
         # record key press
-        key = cv2.waitKey(10) & 0xFF
+        key = cv2.waitKey(delayBetweenFrames) & 0xFF
         
         if key== ord('q'):  # press q to quit  video play back
             break

@@ -38,6 +38,8 @@ frameNum=0
 numberOfFrames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
 print( "[INFO] The video includes {0} frames".format(numberOfFrames))
 fps = cap.get(cv2.CAP_PROP_FPS)
+delayBetweenFrames=int((1/fps)*1000)
+
 print ("[INFO] Frames per second using video.get(cv2.cv.CV_CAP_PROP_FPS): {0}".format(fps))
 print("[INFO] while playing press  p to pause, press r to resume and press q to quit ")
 
@@ -64,7 +66,7 @@ while(cap.isOpened()):
     
 
     # record key press
-    key = cv2.waitKey(10) & 0xFF
+    key = cv2.waitKey(delayBetweenFrames) & 0xFF
         
     if key== ord('q'):  # press q to quit  video play back
         break
