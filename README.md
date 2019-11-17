@@ -34,6 +34,7 @@ press l to show morerects, m for more and q to quit
 
 cd selectiveSeacrhSegmentation </br>
 python SelectiveSearch.py --imagePath breakfast.jpg  --mode q 
+
 ![sample](https://github.com/Walid-Ahmed/imageProcessing/blob/master/sampleImages/selectivesearchDemo.png)
 
 ## Saliency detection
