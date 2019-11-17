@@ -3,6 +3,7 @@ image Processing using python
 
 ## Video playback 
 
+Video will be played with same fps as original
 Note:press q to quit while the video is in playback, and press p to pause video and r to resume 
 
 cd video_play_back </br>
@@ -10,13 +11,13 @@ python videoPlayBack.py --videoFilePath videos/CarsDrivingUnderBridge.mp4
 
 
 ## Video play back while saving sample frames
+Video will be played with same fps as original. Frames will be sampled every N Frame and saved to a folder with the same name as the video file name
 
 Note:press q to quit while the video is in playback, and press p to pause video and r to resume 
 
 cd video_play_back/  </br>
 python  videoPlayBack_w_saving_frames.py   --fileName videos/CarsDrivingUnderBridge.mp4 --everyNFrame 1
 
-Frames will be sampled every N Frame and saved to a folder with the same name as the video file name
 
 
 ## Selective search segmentation
