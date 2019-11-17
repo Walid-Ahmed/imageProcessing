@@ -41,3 +41,5 @@ cd saliency-detection
 python static_saliency.py --image images/mosalah.jpeg
 python objectness_saliency.py --model objectness_trained_model --image images/mosalah.jpeg . #results saves to folder results
 python motion_saliency.py   #feed from camera
+
+ ![Sample curve output from training cats vs dogs dataset](https://github.com/Walid-Ahmed/imageProcessing/blob/master/sampleImages/MoSalahStaticSaliency.png)
