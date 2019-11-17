@@ -28,18 +28,19 @@ python  videoPlayBack_w_saving_frames.py   --fileName videos/CarsDrivingUnderBri
 
 ## Selective search segmentation
 
-intial baseline of code from [here](https://www.learnopencv.com/selective-search-for-object-detection-cpp-python/)
+intial baseline of code from [here](https://www.learnopencv.com/selective-search-for-object-detection-cpp-python/)  </br>
 Selective Search uses 4 similarity measures based on color, texture, size and shape compatibility
 press l to show morerects, m for more and q to quit
 
 cd selectiveSeacrhSegmentation </br>
-python SelectiveSearch.py --imagePath breakfast.jpg  --mode q
+python SelectiveSearch.py --imagePath breakfast.jpg  --mode q 
 
 ## Saliency detection
-initial baseline of code from [here](https://www.pyimagesearch.com/2018/07/16/opencv-saliency-detection/)
+initial baseline of code from [here](https://www.pyimagesearch.com/2018/07/16/opencv-saliency-detection/) </br>
+
 cd saliency-detection
-python static_saliency.py --image images/mosalah.jpeg
-python objectness_saliency.py --model objectness_trained_model --image images/mosalah.jpeg . #results saves to folder results
-python motion_saliency.py   #feed from camera
+python static_saliency.py --image images/mosalah.jpeg  </br>
+python objectness_saliency.py --model objectness_trained_model --image images/mosalah.jpeg . #results saves to folder results  </br>
+python motion_saliency.py   #feed from camera  </br>
 
  ![Sample curve output from training cats vs dogs dataset](https://github.com/Walid-Ahmed/imageProcessing/blob/master/sampleImages/MoSalahStaticSaliency.png)
