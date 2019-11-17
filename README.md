@@ -1,6 +1,12 @@
 # imageProcessing
 image Processing using python
 
+## show image
+
+python imgShowDemo.py --imgFilePath   demo.jpg
+#python showImageHSV.py --imgFilePath   demo.jpg
+
+
 ## Video playback 
 
 Video will be played with same fps as original
