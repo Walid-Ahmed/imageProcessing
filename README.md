@@ -29,8 +29,8 @@ python  videoPlayBack_w_saving_frames.py   --fileName videos/CarsDrivingUnderBri
 ## Selective search segmentation
 
 intial baseline of code from [here](https://www.learnopencv.com/selective-search-for-object-detection-cpp-python/)  </br>
-Selective Search uses 4 similarity measures based on color, texture, size and shape compatibility
-press l to show morerects, m for more and q to quit
+Selective Search uses 4 similarity measures based on color, texture, size and shape compatibility </br>
+press l to show less rects, m for more and q to quit
 
 cd selectiveSeacrhSegmentation </br>
 python SelectiveSearch.py --imagePath breakfast.jpg  --mode q 
