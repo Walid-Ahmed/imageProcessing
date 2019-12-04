@@ -27,11 +27,7 @@ python videoMontage.py --rows 4 --cols  3
 Note:press q to quit while the video is in playback
 
 
-<!-- blank line -->
-<figure class="video_container">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/gVVj76up0pc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</figure>
-<!-- blank line -->
+
 
 ## Video play back while saving sample frames
 Video will be played with same fps as original. Frames will be sampled every N Frame and saved to a folder with the same name as the video file name
