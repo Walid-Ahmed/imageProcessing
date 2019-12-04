@@ -36,6 +36,16 @@ cd selectiveSeacrhSegmentation </br>
 python SelectiveSearch.py --imagePath breakfast.jpg  --mode q 
 
 
+## Video Montage 
+
+Playing multiple videos simultaneously
+Thanks to Adrian Rosebrock   for his inspiring  [article](https://www.pyimagesearch.com/2017/05)
+
+
+cd video_play_back </br>
+python videoPlayBack.py --videoFilePath videos/CarsDrivingUnderBridge.mp4
+
+
 
 ![Sample curve output from training cats vs dogs dataset](https://github.com/Walid-Ahmed/imageProcessing/blob/master/sampleImages/selectivesearchDemo.png)
 
