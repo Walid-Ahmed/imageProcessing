@@ -1,18 +1,23 @@
+#python videoMontage.py --rows 4 --cols 6 
+
+
 import cv2 
 import os
 import numpy as np
 import paths
+import argparse
 
 class VideoMontage:
 
 
-  def __init__(self,numToShow=24):
-    self.width,self.height=150,225
-    self.numToShow=numToShow
-    self.frame = np.zeros((900, 900, 3), np.uint8) #6 videos in row. 4 videos in columns. (total 24)
+  def __init__(self,rows=4,cols=6):
+    self.rows,self.cols=rows,cols
+    self.numToShow=self.rows*self.cols
+    self.width,self.height=int(900/cols),int(900/rows)
+    self.frame = np.zeros((900, 900, 3), np.uint8) 
     self.videoPathsGenerator=self.getListOfvideoFiles()
     self.videoPaths=paths.list_videos("videos")
-    self.cap=[None] * numToShow
+    self.cap=[None] * self.numToShow
 
 
 
@@ -30,10 +35,10 @@ class VideoMontage:
   def run(self):
     fourcc = cv2.VideoWriter_fourcc(*'mp4v') # Be sure to use lower case
     fileNameToSaveVideo="demo_Video.mp4"
-    video_creator = cv2.VideoWriter(fileNameToSaveVideo,fourcc, 20, (900,900))
+    video_creator = cv2.VideoWriter(fileNameToSaveVideo,fourcc, 60, (900,900))
    
 
-    for i in range(24):
+    for i in range(self.numToShow):
           #print(i)
           try:
             fileName=next(self.videoPathsGenerator)
@@ -51,7 +56,7 @@ class VideoMontage:
     while True:
       row=0
       numEmpty=0
-      for i in range(24):
+      for i in range(self.numToShow):
           #print(i)
           try:
             print("----------------------------")
@@ -82,18 +87,19 @@ class VideoMontage:
 
 
 
-            x1=0+(i%6)*150
+            x1=0+(i%self.cols)*self.width
             y1=self.height*row
             img = cv2.resize(img,(self.width,self.height))
             self.frame[y1:y1+self.height, x1:x1+self.width]=img  
 
             
-            if (x1==750):
+            if (x1==(900-self.width)):
               row=row+1
       
 
 
-          except Exception as e:     
+          except Exception as e:   
+            print(e)  
             break
 
             
@@ -114,7 +120,21 @@ class VideoMontage:
     video_creator.release()
 
 if __name__ == "__main__":
-  videoMontage=VideoMontage(24)
+
+  # construct the argument parser and parse the arguments
+  ap = argparse.ArgumentParser()
+  ap.add_argument("-m", "--rows",
+    help="path to BING objectness saliency model")
+  ap.add_argument("-i", "--cols", required=True,
+    help="path to input image")
+
+  args = vars(ap.parse_args())
+  rows=int(args["rows"])
+  cols=int(args["cols"])
+
+
+  videoMontage=VideoMontage(rows,cols)
   videoMontage.run()
+
 
 
