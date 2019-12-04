@@ -42,8 +42,9 @@ Playing multiple videos simultaneously
 Thanks to Adrian Rosebrock   for his inspiring  [article](https://www.pyimagesearch.com/2017/05)
 
 
-cd video_play_back </br>
-python videoPlayBack.py --videoFilePath videos/CarsDrivingUnderBridge.mp4
+cd opencv-Videomontage </br>
+python videoMontage.py --rows 4 --cols  3
+
 
 
 
