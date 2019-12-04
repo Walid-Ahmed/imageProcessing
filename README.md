@@ -17,12 +17,14 @@ python videoPlayBack.py --videoFilePath videos/CarsDrivingUnderBridge.mp4
 
 ## Video Montage 
 
-Playing multiple videos simultaneously
+Playing multiple videos simultaneously </br>
 Thanks to Adrian Rosebrock   for his inspiring  [article](https://www.pyimagesearch.com/2017/05)
 
 
 cd opencv-Videomontage </br>
 python videoMontage.py --rows 4 --cols  3
+
+Note:press q to quit while the video is in playback
 
 ## Video play back while saving sample frames
 Video will be played with same fps as original. Frames will be sampled every N Frame and saved to a folder with the same name as the video file name
