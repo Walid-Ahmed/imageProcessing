@@ -9,7 +9,7 @@ python imgShowDemo.py --imgFilePath   demo.jpg
 
 ## Video playback 
 
-Video will be played with same fps as original
+Video will be played with same fps as original </br>
 Note:press q to quit while the video is in playback, and press p to pause video and r to resume 
 
 cd video_play_back </br>
@@ -30,7 +30,8 @@ Note:press q to quit while the video is in playback
 
 
 ## Video play back while saving sample frames
-Video will be played with same fps as original. Frames will be sampled every N Frame and saved to a folder with the same name as the video file name
+Video will be played with same fps as original.</br>
+Frames will be sampled every N Frame and saved to a folder with the same name as the video file name
 
 Note:press q to quit while the video is in playback, and press p to pause video and r to resume 
 
