@@ -39,6 +39,14 @@ cd video_play_back/  </br>
 python  videoPlayBack_w_saving_frames.py   --fileName videos/CarsDrivingUnderBridge.mp4 --everyNFrame 1
 
 
+## Video play back from a folder with sequence of frames
+Video will be played  from sequence frames stored in a folder .</br>
+a video will be saved from these frames as demo.mp4
+
+Note:press q to quit while the video is in playback, and press p to pause video and r to resume 
+
+cd video_play_back/  </br>
+python videoPlayBackFromFiles.py --folderPath ZakiBashakha
 
 ## Selective search segmentation
 
