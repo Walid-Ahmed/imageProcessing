@@ -1,6 +1,6 @@
 
 #cd video_play_back/
-#python  video_play_back/videoPlayBack_w_saving_frames.py   --fileName videos/CarsDrivingUnderBridge.mp4 --everyNFrame 1
+#python  videoPlayBack_w_saving_frames.py   --fileName videos/ZakiBashakha.mp4 --everyNFrame 1
 
 #Frames will be samples everyNFrame and saved to a folder with the same name as the video file name
 
@@ -32,7 +32,7 @@ cap = cv2.VideoCapture(fileName)
 shutil.rmtree(folderNameToSaveFrames, ignore_errors=True, onerror=None)
 os.makedirs(folderNameToSaveFrames)
 
-
+input("hi")
 frameNum=0
 
 numberOfFrames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
@@ -51,7 +51,8 @@ while(cap.isOpened()):
     if (frame is None):
         break
     if(frameNum%everyNFrame==0):
-        fileNameToSaveFrame=os.path.join(folderNameToSaveFrames, folderNameToSaveFrames+"_"+str(frameNum)+".png")
+
+        fileNameToSaveFrame=os.path.join( folderNameToSaveFrames, (folderNameToSaveFrames+"_"+str(frameNum).zfill(5) ).zfill(5)+".png")
         cv2.imwrite(fileNameToSaveFrame, frame)
         print("[INFO] frame#  {}  saved to  {}".format(frameNum,fileNameToSaveFrame))
     else:  
